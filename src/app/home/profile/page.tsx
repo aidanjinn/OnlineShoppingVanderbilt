@@ -105,11 +105,19 @@ const ProfilePage = () => {
               </label>
               <div className="flex mt-4">
                 <Title order={5}>First Name:</Title>
-                <div className="ml-2">{editFirstName}</div>
+                <TextInput
+                  value={editFirstName}
+                  onChange={(e) => setEditFirstName(e.target.value)}
+                  className="ml-2"
+                />
               </div>
               <div className="flex mt-2">
                 <Title order={5}>Last Name:</Title>
-                <div className="ml-2">{editLastName}</div>
+                <TextInput
+                  value={editLastName}
+                  onChange={(e) => setEditLastName(e.target.value)}
+                  className="ml-2"
+                />
               </div>
               <div className="flex mt-2">
                 <Title order={5}>Email:</Title>
