@@ -23,16 +23,18 @@ const LoginPage = () => {
   const router = useRouter();
   const [isLoginState, setIsLoginState] = useState(true);
 
-  async function handleSignIn() {
-    let userInfo = await getUserCookies();
-    if (userInfo) {
-      console.log("Prior");
-      router.push("/home");
-      console.log("After");
+  useEffect(() => {
+    async function handleSignIn() {
+      let userInfo = await getUserCookies();
+      if (userInfo) {
+        console.log("Prior");
+        router.push("/home");
+        console.log("After");
+      }
     }
-  }
 
-  handleSignIn();
+    handleSignIn();
+  });
 
   return (
     // <MantineProvider >
