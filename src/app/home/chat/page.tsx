@@ -15,7 +15,7 @@ import {
   Button,
 } from "@mantine/core";
 import { useRouter } from "next/navigation";
-const NEXT_PUBLIC_POCKETBASE_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
+const NEXT_PUBLIC_POCKETBASE_URL = "https://say-fly.pockethost.io/";
 
 const ChatPage = () => {
   const { id } = useAuth();

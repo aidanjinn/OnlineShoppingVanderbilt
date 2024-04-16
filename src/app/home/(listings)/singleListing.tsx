@@ -23,7 +23,7 @@ import {
   TextInput,
   Select,
 } from "@mantine/core";
-const NEXT_PUBLIC_POCKETBASE_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
+const NEXT_PUBLIC_POCKETBASE_URL = "https://say-fly.pockethost.io/";
 
 const categoryColors = {
   Electronics: "blue",
@@ -43,9 +43,14 @@ const categoryColors = {
  * @param {Listing} listing - The listing object to display.
  * @returns {JSX.Element} A React fragment that contains both the clickable listing card and the `ListingViewModal`.
  */
-export default function SingleListing({ listing, pagetype }: { listing: Listing, pagetype: string }) {
+export default function SingleListing({
+  listing,
+  pagetype,
+}: {
+  listing: Listing;
+  pagetype: string;
+}) {
   const [isOpened, { open, close }] = useDisclosure(false);
-
 
   /**
    * Gets the color associated with the listing's category for display.
@@ -61,7 +66,12 @@ export default function SingleListing({ listing, pagetype }: { listing: Listing,
   // The JSX structure for the SingleListing component.
   return (
     <>
-      <ListingViewModal open={isOpened} close={close} listing={listing} pagetype={pagetype} />
+      <ListingViewModal
+        open={isOpened}
+        close={close}
+        listing={listing}
+        pagetype={pagetype}
+      />
       <div
         onClick={open}
         className="p-4 cursor-pointer flex flex-col justify-between rounded-lg bg-gray-100 hover:bg-gray-200 h-[280px]"

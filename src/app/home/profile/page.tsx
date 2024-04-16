@@ -18,7 +18,7 @@ import Link from "next/link";
 import { editUserInfo } from "@/app/lib/actions";
 import "@mantine/core/styles.css";
 
-const NEXT_PUBLIC_POCKETBASE_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
+const NEXT_PUBLIC_POCKETBASE_URL = "https://say-fly.pockethost.io/";
 
 const yearOptions = ["freshmen", "sophomore", "junior", "senior"];
 

@@ -18,7 +18,15 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 import { Listing } from "@/app/lib/types";
-import { getListings, createChat, getSavedListings, createMessage, addSavedListings, isUserListingSaved, removeMySavedListings } from "@/app/lib/actions";
+import {
+  getListings,
+  createChat,
+  getSavedListings,
+  createMessage,
+  addSavedListings,
+  isUserListingSaved,
+  removeMySavedListings,
+} from "@/app/lib/actions";
 import { handleReport } from "@/app/lib/actions";
 import "@/app/globals.css";
 import "@mantine/core/styles.css";
@@ -31,7 +39,7 @@ import { Resizable } from "react-resizable";
 import ProfileViewModal from "../(profile)/profileViewModal";
 import { IconBookmark, IconBookmarkFilled } from "@tabler/icons-react";
 
-const NEXT_PUBLIC_POCKETBASE_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
+const NEXT_PUBLIC_POCKETBASE_URL = "https://say-fly.pockethost.io/";
 
 const categoryColors = {
   Electronics: "blue",
@@ -55,7 +63,7 @@ export default function ListingViewModal({
   open,
   close,
   listing,
-  pagetype
+  pagetype,
 }: {
   open: boolean;
   close: () => void;
@@ -91,7 +99,6 @@ export default function ListingViewModal({
     }
   }, [id, listing.id]);
 
-
   async function addToSavedListings() {
     try {
       await addSavedListings(id, listing.id as string);
@@ -100,8 +107,6 @@ export default function ListingViewModal({
       alert("Error saving listing");
     }
   }
-
-
 
   const handleCreateChat = async () => {
     try {
@@ -166,7 +171,6 @@ export default function ListingViewModal({
       console.error("Error saving listing:", error);
       alert("Error saving listing");
     }
-
   }
   async function handleAddToSavedListings() {
     try {
@@ -252,16 +256,15 @@ export default function ListingViewModal({
         >
           {listing.title}
           <div style={{ display: "flex" }}>
-            {isSaved ?
+            {isSaved ? (
               <div onClick={handleRemovefromSavedListings}>
                 <IconBookmarkFilled />
               </div>
-
-              :
+            ) : (
               <div onClick={handleAddToSavedListings}>
                 <IconBookmark />
               </div>
-            }
+            )}
             <Button
               onClick={handleClickReport}
               variant="filled"

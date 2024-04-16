@@ -27,7 +27,7 @@ import { RecordModel } from "pocketbase";
 import { useRouter } from "next/navigation";
 import { Resizable } from "react-resizable";
 
-const NEXT_PUBLIC_POCKETBASE_URL = process.env.NEXT_PUBLIC_POCKETBASE_URL;
+const NEXT_PUBLIC_POCKETBASE_URL = "https://say-fly.pockethost.io/";
 
 /**
  * Display a specific User within a modal.
