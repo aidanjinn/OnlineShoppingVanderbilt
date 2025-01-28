@@ -7,7 +7,16 @@
 
 **Online Shopping Vanderbilt** is a full-stack e-commerce platform designed for Vanderbilt students, faculty, and staff to buy and sell items within the campus community. Built with **React** for the frontend, **Node.js** for the backend, and **PocketBase** for database management, this project provides a seamless and secure online shopping experience.
 
-**Live Demo**: [reusevanderbilt.netlify.app/home](reusevanderbilt.netlify.app/home)  
+## 🎓 **Exclusive for Vanderbilt Students**
+
+This platform is designed exclusively for **Vanderbilt University students, faculty, and staff**. To explore the platform, feel free to log in using the following guest account:
+
+- **Email**: `linkedinguest@vanderbilt.edu`  
+- **Password**: `guest1234`
+
+**Note**: This guest account is for demonstration purposes only. Please do not change the password or misuse the account. If you're a Vanderbilt student, we encourage you to create your own account to fully experience the platform!
+
+**Live Demo**: [https://reusevanderbilt.netlify.app/login](https://reusevanderbilt.netlify.app/login)  
 **GitHub Repository**: [https://github.com/aidanjinn/OnlineShoppingVanderbilt](https://github.com/aidanjinn/OnlineShoppingVanderbilt)
 
 ---
